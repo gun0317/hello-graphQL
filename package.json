@@ -1,0 +1,9 @@
+{
+  "name": "movieQL",
+  "version": "1.0.0",
+  "description": "movie API with graphQL from Nomad Coder",
+  "main": "index.js",
+  "repository": "https://github.com/gun0317/hello-graphQL",
+  "author": "gun0317<xlsh0317@naver.com>",
+  "license": "MIT"
+}
