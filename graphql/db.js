@@ -33,7 +33,7 @@ export const deleteMovie = id => {
 }
 
 export const createMovie = (name, score) => {
-  const newMovie = getMovieObject(movies[movies.length-1].id + 1, name, score)
+  const newMovie = getMovieObject(movies[movies.length - 1].id + 1, name, score)
   movies.push(newMovie)
 
   return newMovie

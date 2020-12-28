@@ -1,4 +1,5 @@
 import { getMovieById, getAllMovies, createMovie, deleteMovie, updateMovie } from "./db"
+import { getAllRealMovies } from "./realApi"
 
 // Query 를 처리(resolve)하는 역할. JS.
 const resolvers = {
@@ -7,11 +8,12 @@ const resolvers = {
   Query: {
     movie: (_, { id }) => getMovieById(id),
     movies: () => getAllMovies(),
+    realMovies: async (_, { limit, rating }) => getAllRealMovies(limit, rating),
   },
   Mutation: {
     createMovie: (_, { name, score }) => createMovie(name, score),
     deleteMovie: (_, { id }) => deleteMovie(id),
-    updateMovie: (_, {id,newName,newScore})=> updateMovie(id, newName, newScore)
+    updateMovie: (_, { id, newName, newScore }) => updateMovie(id, newName, newScore)
   }
 }
 

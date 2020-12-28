@@ -4,9 +4,19 @@ type Movie {
     score: Int!
 }
 
+type RealMovie {
+    id: Int!
+    title: String!
+    rating: Float!
+    summary: String!
+    language: String!
+    medium_cover_image: String!
+}
+
 type Query {
     movies: [Movie]!
     movie(id: Int!): Movie
+    realMovies(limit: Int, rating: Int): [RealMovie]!
 }
 
 type Mutation {
