@@ -1,4 +1,4 @@
-import { getMovieById, getAllMovies, createMovie, deleteMovie } from "./db"
+import { getMovieById, getAllMovies, createMovie, deleteMovie, updateMovie } from "./db"
 
 // Query 를 처리(resolve)하는 역할. JS.
 const resolvers = {
@@ -11,6 +11,7 @@ const resolvers = {
   Mutation: {
     createMovie: (_, { name, score }) => createMovie(name, score),
     deleteMovie: (_, { id }) => deleteMovie(id),
+    updateMovie: (_, {id,newName,newScore})=> updateMovie(id, newName, newScore)
   }
 }
 
